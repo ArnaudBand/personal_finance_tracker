@@ -99,8 +99,7 @@ Make sure you have the following installed:
 
 ### **Home Page**
 > A visually pleasing and responsive layout for adding transactions, viewing a summary, and managing transaction history.
-
-![Home Page Screenshot](https://via.placeholder.com/800x400?text=Home+Page+Screenshot)
+![alt text](image.png)
 
 ---
 
