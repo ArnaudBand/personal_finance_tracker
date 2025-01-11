@@ -1,128 +1,124 @@
-### **Personal Finance Tracker**
+# Personal Finance Tracker
 
-#### **Overview**
-A web application that helps users track their income and expenses with features for categorization, data visualization, and responsive design.
-
----
-
-### **Features**
-1. **Record Income and Expenses**  
-   - Input forms for adding income or expense transactions.
-   - Fields: Amount, Category, Date, and Description.
-
-2. **Categorization**  
-   - Transactions can be categorized into predefined or custom categories (e.g., "Groceries," "Salary," "Rent").
-
-3. **Update or Delete Transactions**  
-   - Allow users to edit or remove previously added transactions.
-
-4. **Data Visualization** (Bonus)  
-   - Use a chart library (like Chart.js or Recharts) to visually represent:
-     - Income vs. Expenses
-     - Category-wise breakdown.
-
-5. **Data Persistence**  
-   - Use browser storage (e.g., LocalStorage or IndexedDB) to store transaction data.
-
-6. **Responsive Design**  
-   - Ensure usability on various devices (mobile, tablet, desktop).
+A modern and user-friendly web application designed to help you track your income and expenses. Categorize transactions, monitor your financial health, and gain insights into your balance with an intuitive interface.
 
 ---
 
-### **Technical Requirements**
-1. **Frontend Framework**  
-   - Use **React.js** for building the UI.
-   - Integrate **TypeScript** for type safety (optional but recommended).
+## **Features**
 
-2. **State Management**  
-   - Use React's Context API or a state management library (like Redux).
-
-3. **Styling**  
-   - Use CSS frameworks like **Tailwind CSS** or custom styles for responsiveness.
-
-4. **Data Persistence**  
-   - Utilize browser storage to persist user data between sessions.
-
-5. **Charts and Graphs**  
-   - Use libraries like **Chart.js**, **Recharts**, or **Victory** for visualizing data.
-
-6. **README Documentation**  
-   - Include a detailed README with:
-     - Project description.
-     - Setup instructions.
-     - How to use the application.
-     - Example screenshots or GIFs.
+- **Add Transactions**: Input forms to record income and expenses.
+- **Categorization**: Organize transactions into "Income" or "Expense" categories.
+- **View Summary**: Get a clear summary of total income, expenses, and balance.
+- **Manage Transactions**: Edit or delete any recorded transactions easily.
+- **Responsive Design**: Optimized for all devices, from mobile to desktop.
+- **Data Persistence**: Transactions are saved using browser local storage.
 
 ---
 
-### **Suggested Folder Structure**
-```plaintext
-src/
-├── components/         # Reusable UI components (forms, lists, charts)
-├── pages/              # Main pages (Home, AddTransaction, etc.)
-├── context/            # Context API setup (if used)
-├── styles/             # Global and component-specific styles
-├── utils/              # Helper functions (e.g., formatters, storage handlers)
-├── hooks/              # Custom React hooks
-├── types/              # TypeScript type definitions
-└── App.tsx             # Main app component
+## **Technologies Used**
+
+- **Frontend**: React, TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: React Hooks
+- **Data Persistence**: Local Storage API
+
+---
+
+## **Getting Started**
+
+### **Prerequisites**
+Make sure you have the following installed:
+- Node.js (v16 or later)
+- npm or yarn package manager
+
+### **Installation**
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/personal-finance-tracker.git
+   cd personal-finance-tracker
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## **Project Structure**
+
+```
+📂 src
+├── 📂 components
+│   ├── TransactionForm.tsx      # Form to add transactions
+│   ├── TransactionList.tsx      # Displays list of transactions
+│   └── Summary.tsx              # Displays income, expense, and balance summary
+├── 📂 hooks
+│   └── useLocalStorage.ts       # Custom hook for local storage management
+├── 📂 schema
+│   └── type.ts                  # TypeScript type definitions for transactions
+├── App.tsx                      # Main app component
+└── index.tsx                    # Entry point for React app
 ```
 
 ---
 
-### **Development Steps**
-1. **Setup the Project**  
-   - Create a new React.js app using TypeScript:  
-     ```bash
-     npx create-react-app personal-finance-tracker --template typescript
-     ```
-   - Install required dependencies:
-     ```bash
-     npm install react-chartjs-2 chart.js tailwindcss
-     ```
+## **Usage**
 
-2. **Create Components**
-   - **Form Component**: Input form for adding income/expense.
-   - **Transaction List Component**: Displays all transactions.
-   - **Edit/Delete Modal**: For updating or deleting transactions.
-   - **Chart Component**: Renders visualizations of income vs. expenses.
+1. **Add Transactions**:
+   - Choose a transaction type (Income or Expense).
+   - Enter a category (e.g., Salary, Groceries).
+   - Specify the amount.
+   - Click "Add Transaction" to save.
 
-3. **Implement State Management**
-   - Use Context API or Redux for managing transaction data.
+2. **View Summary**:
+   - Check the "Summary" section for total income, expenses, and your current balance.
 
-4. **Add Persistence**
-   - Save and load transactions using `LocalStorage`.
-
-5. **Style the Application**
-   - Ensure responsiveness with Tailwind CSS or media queries.
-
-6. **Test on Different Devices**
-   - Check usability on mobile, tablet, and desktop.
+3. **Manage Transactions**:
+   - View your transaction history in the "Transaction History" section.
+   - Delete a transaction by clicking the "Delete" button next to it.
 
 ---
 
-### **Future Features**
-- **Search and Filter**  
-  - Allow users to search or filter transactions by category or date.
+## **Screenshots**
 
-- **Dark Mode**  
-  - Add a toggle for light/dark mode.
-
-- **Export Data**  
-  - Enable users to export their transaction data as a CSV file.
+### **Home Page**
+> A visually pleasing and responsive layout for adding transactions, viewing a summary, and managing transaction history.
+![alt text](image.png)
 
 ---
 
-## Usage
-1. Add income or expense transactions using the form.
-2. View and manage transactions in the list.
-3. Analyze income vs. expenses using charts.
-4. Refresh the page to see data persist.
+## **Future Enhancements**
 
-## Technologies Used
-- React.js with TypeScript
-- Tailwind CSS
-- Chart.js
+- Add a feature to edit transactions.
+- Implement date filtering for transactions.
+- Integrate with a backend to enable multi-device syncing.
+- Provide visual analytics using charts and graphs.
 
-## License
-MIT License
+---
+
+## **License**
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## **Contact**
+
+Created by [Arnaud](https://github.com/ArnaudBand).  
+Feel free to reach out for collaboration or feedback!
