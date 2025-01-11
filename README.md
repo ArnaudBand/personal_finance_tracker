@@ -1,50 +1,125 @@
-# React + TypeScript + Vite
+# Personal Finance Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and user-friendly web application designed to help you track your income and expenses. Categorize transactions, monitor your financial health, and gain insights into your balance with an intuitive interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Features**
 
-## Expanding the ESLint configuration
+- **Add Transactions**: Input forms to record income and expenses.
+- **Categorization**: Organize transactions into "Income" or "Expense" categories.
+- **View Summary**: Get a clear summary of total income, expenses, and balance.
+- **Manage Transactions**: Edit or delete any recorded transactions easily.
+- **Responsive Design**: Optimized for all devices, from mobile to desktop.
+- **Data Persistence**: Transactions are saved using browser local storage.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## **Technologies Used**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Frontend**: React, TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: React Hooks
+- **Data Persistence**: Local Storage API
+
+---
+
+## **Getting Started**
+
+### **Prerequisites**
+Make sure you have the following installed:
+- Node.js (v16 or later)
+- npm or yarn package manager
+
+### **Installation**
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/personal-finance-tracker.git
+   cd personal-finance-tracker
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## **Project Structure**
+
+```
+📂 src
+├── 📂 components
+│   ├── TransactionForm.tsx      # Form to add transactions
+│   ├── TransactionList.tsx      # Displays list of transactions
+│   └── Summary.tsx              # Displays income, expense, and balance summary
+├── 📂 hooks
+│   └── useLocalStorage.ts       # Custom hook for local storage management
+├── 📂 schema
+│   └── type.ts                  # TypeScript type definitions for transactions
+├── App.tsx                      # Main app component
+└── index.tsx                    # Entry point for React app
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## **Usage**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Add Transactions**:
+   - Choose a transaction type (Income or Expense).
+   - Enter a category (e.g., Salary, Groceries).
+   - Specify the amount.
+   - Click "Add Transaction" to save.
+
+2. **View Summary**:
+   - Check the "Summary" section for total income, expenses, and your current balance.
+
+3. **Manage Transactions**:
+   - View your transaction history in the "Transaction History" section.
+   - Delete a transaction by clicking the "Delete" button next to it.
+
+---
+
+## **Screenshots**
+
+### **Home Page**
+> A visually pleasing and responsive layout for adding transactions, viewing a summary, and managing transaction history.
+
+![Home Page Screenshot](https://via.placeholder.com/800x400?text=Home+Page+Screenshot)
+
+---
+
+## **Future Enhancements**
+
+- Add a feature to edit transactions.
+- Implement date filtering for transactions.
+- Integrate with a backend to enable multi-device syncing.
+- Provide visual analytics using charts and graphs.
+
+---
+
+## **License**
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## **Contact**
+
+Created by [Arnaud](https://github.com/ArnaudBand).  
+Feel free to reach out for collaboration or feedback!
